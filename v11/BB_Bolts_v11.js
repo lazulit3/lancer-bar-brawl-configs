@@ -61,7 +61,7 @@ barConfig['deployable'] = bars;
 await game.settings.set("barbrawl", "defaultTypeResources", barConfig);
 
 // :warning: Reset all actors' prototype token bars
-await Promise.all(game.actors.map(a => a.update({ "token.flags.barbrawl.resourceBars": bars }, {'diff': false, 'recursive': false})));
+await Promise.all(game.actors.map(a => a.update({ "prototypeToken.flags.barbrawl.resourceBars": bars }, {'diff': false, 'recursive': false})));
 
 // Reset the bars on all existing tokens
 await Promise.all(
